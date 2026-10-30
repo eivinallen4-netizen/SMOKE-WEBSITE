@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <path id="arm" d="M50 8V50M38 19L50 26L62 19M41 32L50 37.2L59 32"/>
+  </defs>
+  <use href="#arm"/>
+  <use href="#arm" transform="rotate(60 50 50)"/>
+  <use href="#arm" transform="rotate(120 50 50)"/>
+  <use href="#arm" transform="rotate(180 50 50)"/>
+  <use href="#arm" transform="rotate(240 50 50)"/>
+  <use href="#arm" transform="rotate(300 50 50)"/>
+</svg>

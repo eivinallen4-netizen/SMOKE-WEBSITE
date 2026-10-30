@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet" overflow="hidden" color="#0B84D9">
+  <defs>
+    <path id="arm" d="M50 8V50M38 19L50 26L62 19M41 32L50 37.2L59 32"/>
+    <g id="flake" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <use href="#arm"/>
+      <use href="#arm" transform="rotate(60 50 50)"/>
+      <use href="#arm" transform="rotate(120 50 50)"/>
+      <use href="#arm" transform="rotate(180 50 50)"/>
+      <use href="#arm" transform="rotate(240 50 50)"/>
+      <use href="#arm" transform="rotate(300 50 50)"/>
+    </g>
+    <circle id="dot" r="1" fill="currentColor"/>
+  </defs>
+  <use href="#flake" transform="translate(24 26) rotate(14) scale(.12) translate(-50 -50)" opacity=".07"/>
+  <use href="#flake" transform="translate(82 43) rotate(32) scale(.08) translate(-50 -50)" opacity=".06"/>
+  <use href="#flake" transform="translate(174 20) rotate(-9) scale(.14) translate(-50 -50)" opacity=".08"/>
+  <g opacity=".06">
+    <use href="#flake" transform="translate(238 73) rotate(18) scale(.18) translate(-50 -50)"/>
+    <use href="#flake" transform="translate(-2 73) rotate(18) scale(.18) translate(-50 -50)"/>
+  </g>
+  <use href="#flake" transform="translate(38 116) rotate(4) scale(.08) translate(-50 -50)" opacity=".06"/>
+  <use href="#flake" transform="translate(110 99) rotate(24) scale(.06) translate(-50 -50)" opacity=".05"/>
+  <use href="#flake" transform="translate(184 141) rotate(40) scale(.12) translate(-50 -50)" opacity=".08"/>
+  <use href="#flake" transform="translate(66 192) rotate(-14) scale(.16) translate(-50 -50)" opacity=".1"/>
+  <use href="#flake" transform="translate(208 209) rotate(22) scale(.08) translate(-50 -50)" opacity=".06"/>
+  <g opacity=".07">
+    <use href="#flake" transform="translate(128 238) rotate(-18) scale(.12) translate(-50 -50)"/>
+    <use href="#flake" transform="translate(128 -2) rotate(-18) scale(.12) translate(-50 -50)"/>
+  </g>
+  <g opacity=".08">
+    <use href="#dot" x="54" y="62"/>
+    <use href="#dot" x="136" y="35"/>
+    <use href="#dot" x="211" y="111"/>
+    <use href="#dot" x="17" y="176"/>
+    <use href="#dot" x="99" y="160"/>
+    <use href="#dot" x="159" y="198"/>
+    <use href="#dot" x="35" y="226"/>
+  </g>
+  <g opacity=".05">
+    <use href="#dot" transform="translate(145 118) scale(1.5)"/>
+    <use href="#dot" transform="translate(239.5 174) scale(1.5)"/>
+    <use href="#dot" transform="translate(-.5 174) scale(1.5)"/>
+  </g>
+</svg>

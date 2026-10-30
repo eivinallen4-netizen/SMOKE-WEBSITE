@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 400" preserveAspectRatio="none">
+  <defs>
+    <filter id="blur" x="-25%" y="-150%" width="150%" height="400%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".4" stop-color="#FFFFFF" stop-opacity=".75"/>
+      <stop offset=".75" stop-color="#FFFFFF" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="top-light" x="0" y="0" width="1440" height="400" maskUnits="userSpaceOnUse">
+      <path fill="url(#fade)" d="M0 0H1440V400H0Z"/>
+    </mask>
+  </defs>
+  <g mask="url(#top-light)">
+    <g filter="url(#blur)">
+      <ellipse cx="330" cy="32" rx="610" ry="48" fill="#2EB6FF" opacity=".3"/>
+      <ellipse cx="1110" cy="79" rx="520" ry="48" fill="#0B84D9" opacity=".28"/>
+    </g>
+  </g>
+</svg>

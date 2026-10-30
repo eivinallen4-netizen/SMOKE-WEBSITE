@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05080D">
+  <title>20 Below Smoke &amp; Vape — Brand Guide</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Oswald:wght@500;600;700&amp;display=swap">
+  <style>
+    :root {
+      --glacier: #37CEFD;
+      --ice: #2EB6FF;
+      --deep-ice: #0B84D9;
+      --snow: #FFFFFF;
+      --night: #05080D;
+      --frost: #E3F4FF;
+      --line: rgba(227,244,255,.16);
+      --muted: rgba(227,244,255,.75);
+      color-scheme: dark;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--snow);
+      background: var(--night);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.6; }
+    img { display: block; max-width: 100%; }
+    a { color: var(--glacier); text-underline-offset: 5px; }
+    a:focus-visible { outline: 3px solid var(--glacier); outline-offset: 6px; }
+    h1, h2, h3, p, figure { margin: 0; }
+    h1, h2, h3 {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+    h1 { font-size: clamp(36px, 5vw, 60px); text-transform: uppercase; }
+    h2 { font-size: clamp(28px, 3vw, 38px); }
+    h3 { font-size: 25px; }
+    code { font-family: ui-monospace, Consolas, monospace; font-size: .85rem; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .eyebrow {
+      color: var(--glacier);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .masthead {
+      position: relative;
+      isolation: isolate;
+      padding: 30px 0 50px;
+      background: var(--night);
+    }
+    .masthead::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: url("aurora-dark.svg") center top / 100% 100% no-repeat;
+      pointer-events: none;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding-bottom: 46px;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 20px; font-size: .8rem; }
+    nav a { color: var(--frost); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .brand-lockup {
+      width: min(740px, 100%);
+      margin-inline: auto;
+      padding: 28px;
+    }
+    .brand-lockup img { width: 100%; height: auto; }
+    .masthead-copy { text-align: center; padding-top: 24px; }
+    .masthead-copy p {
+      max-width: 570px;
+      margin: 16px auto 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .header-edge {
+      height: 40px;
+      background: url("snow-drip.svg") left top / 400px 40px repeat-x;
+    }
+    main { padding-top: 16px; }
+    section { padding-block: 52px; scroll-margin-top: 24px; }
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 28px;
+      margin-bottom: 26px;
+    }
+    .section-heading .eyebrow { margin-bottom: 10px; }
+    .section-heading > p {
+      max-width: 430px;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .swatch { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .swatch-color { height: 86px; background: var(--swatch); }
+    .swatch-label { padding: 14px 12px; }
+    .swatch-label strong { display: block; font-size: .85rem; font-weight: 600; }
+    .swatch-label code { color: var(--muted); font-size: .76rem; }
+    .type-grid, .asset-grid, .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .type-card {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    .type-card .eyebrow { margin-bottom: 24px; }
+    .display-sample {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: clamp(38px, 5vw, 64px);
+      font-weight: 600;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+    .body-sample { font-size: 1.05rem; max-width: 400px; }
+    .type-detail { margin-top: 24px; font-size: .8rem; color: var(--muted); }
+    .asset {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    .stage {
+      position: relative;
+      min-height: 220px;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--night);
+    }
+    .stage-center { display: grid; place-items: center; padding: 30px; }
+    .stage-label {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    figcaption { padding: 19px 22px 22px; border-top: 1px solid var(--line); }
+    figcaption code { color: var(--glacier); overflow-wrap: anywhere; }
+    figcaption p { margin-top: 7px; color: var(--muted); font-size: .82rem; }
+    .strip-dark { display: grid; place-items: center; padding-bottom: 40px; }
+    .strip-dark::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 40px;
+      background: url("snow-drip.svg") left top / 400px 40px repeat-x;
+    }
+    .strip-light {
+      display: grid;
+      place-items: center;
+      padding-top: 60px;
+      color: var(--deep-ice);
+      background: var(--snow);
+    }
+    .strip-light::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 40px;
+      background: var(--frost);
+    }
+    .strip-light::after {
+      content: "";
+      position: absolute;
+      inset: 40px 0 auto;
+      height: 40px;
+      background: url("snow-drip-ice.svg") left top / 400px 40px repeat-x;
+    }
+    .icicles { display: grid; place-items: center; padding-top: 35px; }
+    .icicles::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 48px;
+      background: url("icicle-edge.svg") left top / 400px 48px repeat-x;
+    }
+    .marks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: clamp(22px, 5vw, 50px);
+    }
+    .mark-option { display: grid; justify-items: center; gap: 15px; font-size: .75rem; }
+    .flake, .solid {
+      display: inline-block;
+      flex: none;
+      background: currentColor;
+    }
+    .flake {
+      width: 58px;
+      height: 58px;
+      -webkit-mask: url("snowflake.svg") center / contain no-repeat;
+      mask: url("snowflake.svg") center / contain no-repeat;
+    }
+    .solid {
+      width: var(--size, 24px);
+      height: var(--size, 24px);
+      -webkit-mask: url("snowflake-solid.svg") center / contain no-repeat;
+      mask: url("snowflake-solid.svg") center / contain no-repeat;
+    }
+    .ice { color: var(--ice); }
+    .deep-ice { color: var(--deep-ice); }
+    .snow { color: var(--snow); }
+    .small-marks {
+      display: grid;
+      align-content: center;
+      gap: 20px;
+      padding: 30px;
+      background: var(--frost);
+      color: var(--night);
+    }
+    .bullet-row { display: flex; align-items: center; gap: 14px; font-size: .9rem; }
+    .bullet-row small { margin-left: auto; color: var(--deep-ice); font-size: .75rem; }
+    .corner-stage { min-height: 260px; display: grid; place-items: center; padding: 55px; }
+    .corner {
+      position: absolute;
+      width: 48%;
+      max-width: 220px;
+      height: auto;
+      opacity: .7;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .tl { top: 0; left: 0; }
+    .tr { top: 0; right: 0; transform: scaleX(-1); }
+    .bl { bottom: 0; left: 0; transform: scaleY(-1); }
+    .br { bottom: 0; right: 0; transform: scale(-1); }
+    .corner-copy { text-align: center; max-width: 230px; }
+    .corner-copy p { margin-top: 12px; font-size: .8rem; color: var(--muted); }
+    .pattern-dark {
+      min-height: 280px;
+      background: var(--night) url("ice-pattern.svg") left top / 240px 240px repeat;
+    }
+    .pattern-light {
+      min-height: 280px;
+      background: var(--snow) url("ice-pattern-light.svg") left top / 240px 240px repeat;
+    }
+    .grain-stage { display: grid; grid-template-columns: 1fr 1fr; min-height: 240px; }
+    .grain-panel {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: end;
+      padding: 20px;
+      background: linear-gradient(145deg, rgba(46,182,255,.22), var(--night));
+    }
+    .grain-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: url("frost-grain.svg") left top / 200px 200px repeat;
+      mix-blend-mode: soft-light;
+      opacity: .8;
+      pointer-events: none;
+    }
+    .grain-panel.light {
+      color: var(--night);
+      background: linear-gradient(145deg, var(--frost), rgba(55,206,253,.65));
+    }
+    .grain-panel.light::before { mix-blend-mode: overlay; }
+    .grain-panel span { font-size: .7rem; font-weight: 600; letter-spacing: .04em; }
+    .hero-stage { display: grid; place-items: center; min-height: 320px; }
+    .hero-stage img { width: 320px; height: 320px; max-width: 100%; object-fit: contain; }
+    .aurora-stage {
+      min-height: 240px;
+      display: flex;
+      align-items: end;
+      padding: 28px;
+      background: var(--night) url("aurora-dark.svg") center top / 100% 100% no-repeat;
+    }
+    .aurora-stage p { color: var(--muted); font-size: .85rem; }
+    .badge-stage { min-height: 240px; }
+    .badge-stage img { width: 184px; height: 184px; }
+    .clear-space {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 28px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    .clear-space-visual { text-align: center; }
+    .clear-space-frame { padding: 30px; border: 1px dashed var(--ice); }
+    .clear-space-frame img { width: 100%; height: auto; }
+    .clear-space-visual small { display: block; margin-top: 12px; color: var(--muted); font-size: .72rem; }
+    .clear-space-copy p { margin-top: 14px; font-size: .88rem; color: var(--muted); }
+    .rule-card { padding: 28px; border-top: 2px solid var(--ice); background: rgba(227,244,255,.03); }
+    .rule-card h3 { margin-bottom: 18px; }
+    .rule-card ul { margin: 0; padding-left: 19px; color: var(--muted); font-size: .87rem; }
+    .rule-card li + li { margin-top: 12px; }
+    .rule-card li::marker { color: var(--ice); }
+    .production-note {
+      margin-top: 24px;
+      max-width: 850px;
+      font-size: .8rem;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 25px;
+      padding: 38px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .75rem;
+    }
+    footer .wrap { display: flex; justify-content: space-between; gap: 20px; }
+    @media (max-width: 760px) {
+      .palette { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .section-heading { display: block; }
+      .section-heading > p { margin-top: 16px; }
+      .type-grid, .asset-grid, .rules-grid, .clear-space { grid-template-columns: 1fr; }
+      .topline { align-items: start; padding-bottom: 24px; }
+      nav { justify-content: end; gap: 10px 16px; }
+      .brand-lockup { padding: 18px 0; }
+      section { padding-block: 36px; }
+      .clear-space { gap: 28px; padding: 24px; }
+      .marks { gap: 42px; }
+    }
+    @media (max-width: 420px) {
+      .wrap { width: calc(100% - 28px); }
+      .topline { display: block; }
+      nav { justify-content: start; margin-top: 18px; }
+      .swatch-label { padding: 12px 8px; }
+      .swatch-label strong { font-size: .76rem; }
+      .swatch-label code { font-size: .68rem; }
+      .type-card { padding: 24px; }
+      .corner-stage { padding: 48px 30px; }
+      footer .wrap { display: block; }
+      footer a { display: inline-block; margin-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead" id="top">
+    <div class="wrap">
+      <div class="topline">
+        <p class="eyebrow">20 Below / Las Vegas</p>
+        <nav aria-label="Brand guide sections">
+          <a href="#palette">Palette</a>
+          <a href="#typography">Type</a>
+          <a href="#assets">Assets</a>
+          <a href="#usage">Usage</a>
+        </nav>
+      </div>
+      <div class="brand-lockup">
+        <img src="../the offical logo.png" alt="20 Below Smoke &amp; Vape">
+      </div>
+      <div class="masthead-copy">
+        <h1>Brand guide</h1>
+        <p>Glacier blue, chunky snow caps and quiet winter textures. Keep the logo bold and give the details room to breathe.</p>
+      </div>
+    </div>
+  </header>
+  <div class="header-edge" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <section id="palette" aria-labelledby="palette-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / Color</p>
+          <h2 id="palette-title">One cold palette.</h2>
+        </div>
+        <p>Use these six colors for decorative assets. Opacity creates depth; the original logo remains unchanged.</p>
+      </div>
+      <div class="palette">
+        <div class="swatch">
+          <div class="swatch-color" style="--swatch: #37CEFD"></div>
+          <div class="swatch-label"><strong>Glacier</strong><code>#37CEFD</code></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="--swatch: #2EB6FF"></div>
+          <div class="swatch-label"><strong>Ice</strong><code>#2EB6FF</code></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="--swatch: #0B84D9"></div>
+          <div class="swatch-label"><strong>Deep Ice</strong><code>#0B84D9</code></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="--swatch: #FFFFFF"></div>
+          <div class="swatch-label"><strong>Snow</strong><code>#FFFFFF</code></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="--swatch: #05080D"></div>
+          <div class="swatch-label"><strong>Night</strong><code>#05080D</code></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="--swatch: #E3F4FF"></div>
+          <div class="swatch-label"><strong>Frost</strong><code>#E3F4FF</code></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="typography" aria-labelledby="type-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / Typography</p>
+          <h2 id="type-title">Bold display. Clear body.</h2>
+        </div>
+        <p>Oswald gives headings their compact weight. Inter keeps descriptions, navigation and everyday information readable.</p>
+      </div>
+      <div class="type-grid">
+        <article class="type-card">
+          <p class="eyebrow">Oswald / Display</p>
+          <p class="display-sample">Always<br><span class="ice">below zero.</span></p>
+          <p class="type-detail">500–700 weight · Short headlines · Generous surrounding space</p>
+        </article>
+        <article class="type-card">
+          <p class="eyebrow">Inter / Body</p>
+          <p class="body-sample">A little frost goes a long way. Let the product, the message and the logo lead, with soft ice details around the edges.</p>
+          <p class="type-detail">400–600 weight · Comfortable line height · Sentence case</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="assets" aria-labelledby="assets-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">03 / Decorative library</p>
+          <h2 id="assets-title">Built from the snow cap.</h2>
+        </div>
+        <p>The header above combines the original logo, aurora backdrop and repeating snow edge. Individual treatments appear below at their intended colors.</p>
+      </div>
+
+      <div class="asset-grid">
+        <figure class="asset">
+          <div class="stage strip-dark">
+            <span class="stage-label">Snow under the header</span>
+          </div>
+          <figcaption>
+            <code>snow-drip.svg</code>
+            <p>Repeat horizontally beneath the dark site header at 400 × 40 px per tile.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage strip-light">
+            <span class="stage-label">A softer section edge</span>
+          </div>
+          <figcaption>
+            <code>snow-drip-ice.svg</code>
+            <p>Repeat beneath a Frost panel to transition into a white section.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage icicles">
+            <span class="stage-label">A little deeper freeze</span>
+          </div>
+          <figcaption>
+            <code>icicle-edge.svg</code>
+            <p>Repeat along the top edge of a dark feature section at 400 × 48 px.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage stage-center">
+            <div class="marks">
+              <div class="mark-option">
+                <span class="flake ice" role="img" aria-label="Snowflake in Ice"></span>
+                <span>Ice</span>
+              </div>
+              <div class="mark-option">
+                <span class="flake deep-ice" role="img" aria-label="Snowflake in Deep Ice"></span>
+                <span>Deep Ice</span>
+              </div>
+              <div class="mark-option">
+                <span class="flake snow" role="img" aria-label="Snowflake in Snow"></span>
+                <span>Snow</span>
+              </div>
+            </div>
+          </div>
+          <figcaption>
+            <code>snowflake.svg</code>
+            <p>Use as a rounded accent beside headings or around hero edges; recolor within the palette.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage small-marks">
+            <div class="bullet-row">
+              <span class="solid deep-ice" style="--size: 12px" aria-hidden="true"></span>
+              <span>Small list accent</span>
+              <small>12 px</small>
+            </div>
+            <div class="bullet-row">
+              <span class="solid deep-ice" style="--size: 18px" aria-hidden="true"></span>
+              <span>Compact category detail</span>
+              <small>18 px</small>
+            </div>
+            <div class="bullet-row">
+              <span class="solid deep-ice" style="--size: 24px" aria-hidden="true"></span>
+              <span>Simple decorative marker</span>
+              <small>24 px</small>
+            </div>
+          </div>
+          <figcaption>
+            <code>snowflake-solid.svg</code>
+            <p>Use the filled six-point mark for tiny bullets, separators and compact accents.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage corner-stage">
+            <img class="corner tl" src="frost-corner.svg" alt="">
+            <img class="corner tr" src="frost-corner.svg" alt="">
+            <img class="corner bl" src="frost-corner.svg" alt="">
+            <img class="corner br" src="frost-corner.svg" alt="">
+            <div class="corner-copy">
+              <h3>Keep the middle clear.</h3>
+              <p>Let the frost grow inward from the corners.</p>
+            </div>
+          </div>
+          <figcaption>
+            <code>frost-corner.svg</code>
+            <p>Anchor to a card corner; mirror horizontally or vertically for the other three corners.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage pattern-dark" role="img" aria-label="Sparse blue snowflakes and dots repeating on Night"></div>
+          <figcaption>
+            <code>ice-pattern.svg</code>
+            <p>Repeat at 240 × 240 px behind dark sections for a sparse, quiet winter texture.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage pattern-light" role="img" aria-label="Very faint Deep Ice snowflakes and dots repeating on white"></div>
+          <figcaption>
+            <code>ice-pattern-light.svg</code>
+            <p>Repeat at 240 × 240 px behind white or Frost sections for a barely visible accent.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage grain-stage">
+            <div class="grain-panel"><span>SOFT-LIGHT / DARK</span></div>
+            <div class="grain-panel light"><span>OVERLAY / LIGHT</span></div>
+          </div>
+          <figcaption>
+            <code>frost-grain.svg</code>
+            <p>Repeat at 200 × 200 px with soft-light or overlay to add subtle frosted-glass grain.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage hero-stage">
+            <img src="hero-glow.svg" alt="Soft blue halo with eight small snowflakes around an open center">
+          </div>
+          <figcaption>
+            <code>hero-glow.svg</code>
+            <p>Center behind the hero product image, keeping the soft middle free of extra decoration.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage aurora-stage">
+            <p>Light above. Space below.</p>
+          </div>
+          <figcaption>
+            <code>aurora-dark.svg</code>
+            <p>Stretch across dark sections or the footer; the light disappears by 60% of the height.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <div class="stage stage-center badge-stage">
+            <img src="badge-seal.svg" alt="20 Below Smoke &amp; Vape, Las Vegas circular seal with a snowflake and minus twenty degrees">
+          </div>
+          <figcaption>
+            <code>badge-seal.svg</code>
+            <p>Use as a secondary stamp in the footer or a spacious brand panel, away from body copy.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+<section aria-labelledby="buttons-items-title" style="padding:32px;background:#05080D;color:#FFFFFF;font-family:Inter,sans-serif;">
+  <h2 id="buttons-items-title" style="margin:0 0 24px;font-family:Oswald,sans-serif;font-size:28px;font-weight:600;line-height:1.2;">Buttons &amp; items</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:24px;">
+    <button type="button" style="position:relative;box-sizing:border-box;height:44px;padding:0 24px;overflow:hidden;border:1px solid #263342;border-radius:999px;background:#000000;color:#FFFFFF;font:600 14px Inter,sans-serif;cursor:pointer;" onmouseenter="this.firstElementChild.style.transform='translateY(-100%)';this.firstElementChild.style.opacity='0';" onmouseleave="this.firstElementChild.style.transform='translateY(0)';this.firstElementChild.style.opacity='1';">
+      <span aria-hidden="true" style='position:absolute;top:0;left:0;right:0;height:7px;background:#FFFFFF;pointer-events:none;transform:translateY(0);opacity:1;transition:transform 180ms ease,opacity 180ms ease;-webkit-mask:url("snow-cap.svg") 0 0 / 56px 100% repeat-x;mask:url("snow-cap.svg") 0 0 / 56px 100% repeat-x;'></span>
+      Black pill
+    </button>
+    <button type="button" style="position:relative;box-sizing:border-box;height:44px;padding:0 24px;overflow:hidden;border:0;border-radius:999px;background:linear-gradient(135deg,#2EB6FF,#12AEFC);color:#05080D;font:600 14px Inter,sans-serif;cursor:pointer;" onmouseenter="this.firstElementChild.style.transform='translateY(-100%)';this.firstElementChild.style.opacity='0';" onmouseleave="this.firstElementChild.style.transform='translateY(0)';this.firstElementChild.style.opacity='1';">
+      <span aria-hidden="true" style='position:absolute;top:0;left:0;right:0;height:7px;background:#FFFFFF;pointer-events:none;transform:translateY(0);opacity:1;transition:transform 180ms ease,opacity 180ms ease;-webkit-mask:url("snow-cap.svg") 0 0 / 56px 100% repeat-x;mask:url("snow-cap.svg") 0 0 / 56px 100% repeat-x;'></span>
+      Ice-blue pill
+    </button>
+    <button type="button" style="position:relative;box-sizing:border-box;height:44px;padding:0 24px;overflow:hidden;border:1px solid #2EB6FF;border-radius:999px;background:transparent;color:#FFFFFF;font:600 14px Inter,sans-serif;cursor:pointer;" onmouseenter="this.firstElementChild.style.transform='translateY(-100%)';this.firstElementChild.style.opacity='0';" onmouseleave="this.firstElementChild.style.transform='translateY(0)';this.firstElementChild.style.opacity='1';">
+      <span aria-hidden="true" style='position:absolute;top:0;left:0;right:0;height:7px;background:#FFFFFF;pointer-events:none;transform:translateY(0);opacity:1;transition:transform 180ms ease,opacity 180ms ease;-webkit-mask:url("snow-cap.svg") 0 0 / 56px 100% repeat-x;mask:url("snow-cap.svg") 0 0 / 56px 100% repeat-x;'></span>
+      Outline pill
+    </button>
+  </div>
+  <p style="margin:0 0 8px;color:#C3CFDC;font-size:14px;line-height:1.5;">Snow caps sit inside the button's top edge only</p>
+  <p style="margin:0;color:#C3CFDC;font-size:14px;line-height:1.5;">On hover the cap melts away (slides up and fades)</p>
+</section>
+
+    <section id="usage" aria-labelledby="usage-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">04 / Usage</p>
+          <h2 id="usage-title">Make room for the brand.</h2>
+        </div>
+        <p>Decoration supports the content. Preserve the logo, keep the palette cold and leave reading areas calm.</p>
+      </div>
+
+      <div class="clear-space">
+        <div class="clear-space-visual">
+          <div class="clear-space-frame">
+            <img src="../the offical logo.png" alt="Original 20 Below Smoke &amp; Vape logo with surrounding clear space">
+          </div>
+          <small>Clear-space illustration; not to scale.</small>
+        </div>
+        <div class="clear-space-copy">
+          <h3>Recommended clear space</h3>
+          <p>Leave at least half the height of the “20 BELOW” letters around the visible logo on every side. Measure from the artwork, including its snow caps.</p>
+          <p>Keep badges, snowflakes and hard edges outside this space. A faint, soft background glow may sit behind the lockup.</p>
+        </div>
+      </div>
+
+      <div class="rules-grid">
+        <article class="rule-card">
+          <h3>Do</h3>
+          <ul>
+            <li>Use Snow or Frost drips with rounded ends and varied depths.</li>
+            <li>Keep crystals, snowflakes and brighter details at the edges and corners.</li>
+            <li>Preserve the proportions of the logo, snowflakes and circular seal.</li>
+            <li>Keep textures beneath body text at a final visible opacity of about 12% or less.</li>
+            <li>Use a solid reading area when decoration competes with text.</li>
+            <li>Repeat strips at their natural proportions and tiles at consistent sizes.</li>
+          </ul>
+        </article>
+        <article class="rule-card">
+          <h3>Don't</h3>
+          <ul>
+            <li>Recolor decorative assets outside the six-color palette or add orange heat effects.</li>
+            <li>Rebuild, stretch, crop or recolor the original logo.</li>
+            <li>Place dense frost, sharp icicles or the badge directly over body copy.</li>
+            <li>Add realistic ice, scratchy lines, cloud shapes or heavy shadows.</li>
+            <li>Stretch the repeating tiles to fit a section; repeat them instead.</li>
+            <li>Combine every texture in one section. Choose one main treatment and a small supporting accent.</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="production-note">The two pattern tiles and the grain already contain low alpha. Reduce their layer opacity further when they sit beneath text. Snowflake recoloring above uses local SVG masks; the marks also support currentColor when embedded inline. The seal uses local font fallbacks when viewed as a standalone image.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>20 Below Smoke &amp; Vape · Las Vegas · Decorative brand system</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>

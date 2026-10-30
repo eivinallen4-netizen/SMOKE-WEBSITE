@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="xMinYMin meet" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <radialGradient id="fade" cx="0" cy="0" r="185" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".4" stop-color="#FFFFFF" stop-opacity=".85"/>
+      <stop offset=".8" stop-color="#FFFFFF" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="corner-fade" x="0" y="0" width="300" height="300" maskUnits="userSpaceOnUse">
+      <path fill="url(#fade)" d="M0 0H300V300H0Z"/>
+    </mask>
+    <g id="frond">
+      <path stroke-width="4" d="M0 0V-120M-22-38.7L0-26L22-38.7M-28-67.2L0-51L28-67.2M-22-89.7L0-77L22-89.7M-13-107.5L0-100L13-107.5"/>
+      <path stroke-width="2.5" d="M-12-32.9V-45M12-32.9V-45M-16-60.2V-73M16-60.2V-73M-12-83.9V-95M12-83.9V-95"/>
+    </g>
+  </defs>
+  <g mask="url(#corner-fade)">
+    <g stroke="#37CEFD" opacity=".9">
+      <use href="#frond" transform="translate(8 8) rotate(90) scale(1.3)"/>
+      <use href="#frond" transform="translate(8 8) rotate(150) scale(1.3)"/>
+      <use href="#frond" transform="translate(58 9) rotate(120) scale(.6)" opacity=".7"/>
+    </g>
+    <g stroke="#0B84D9" opacity=".75">
+      <use href="#frond" transform="translate(12 12) rotate(120) scale(1.3)"/>
+      <use href="#frond" transform="translate(12 12) rotate(180) scale(1.3)"/>
+      <use href="#frond" transform="translate(9 58) rotate(150) scale(.6)" opacity=".7"/>
+    </g>
+    <path d="M0 30L26 15L52 0M0 57L49 29L98 0M0 88L76 44L152 0" stroke="#FFFFFF" stroke-width="3" opacity=".3"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" fill="currentColor">
+  <defs>
+    <path id="point" d="M9.4 12L10.6 2.8Q10.8 1.5 12 1.5Q13.2 1.5 13.4 2.8L14.6 12Z"/>
+  </defs>
+  <use href="#point"/>
+  <use href="#point" transform="rotate(60 12 12)"/>
+  <use href="#point" transform="rotate(120 12 12)"/>
+  <use href="#point" transform="rotate(180 12 12)"/>
+  <use href="#point" transform="rotate(240 12 12)"/>
+  <use href="#point" transform="rotate(300 12 12)"/>
+  <path d="M12 7.5L15.9 9.8V14.2L12 16.5L8.1 14.2V9.8Z"/>
+</svg>

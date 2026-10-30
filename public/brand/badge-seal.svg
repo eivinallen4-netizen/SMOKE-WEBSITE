@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <path id="type-ring" d="M100 177A77 77 0 1 1 100 23A77 77 0 1 1 100 177"/>
+    <clipPath id="inner-circle">
+      <circle cx="100" cy="100" r="61"/>
+    </clipPath>
+    <path id="arm" d="M50 8V50M38 19L50 26L62 19M41 32L50 37.2L59 32"/>
+    <g id="flake" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <use href="#arm"/>
+      <use href="#arm" transform="rotate(60 50 50)"/>
+      <use href="#arm" transform="rotate(120 50 50)"/>
+      <use href="#arm" transform="rotate(180 50 50)"/>
+      <use href="#arm" transform="rotate(240 50 50)"/>
+      <use href="#arm" transform="rotate(300 50 50)"/>
+    </g>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="#05080D" stroke="#2EB6FF" stroke-width="2"/>
+  <circle cx="100" cy="100" r="62" fill="#05080D" stroke="#2EB6FF" stroke-width="2"/>
+  <g clip-path="url(#inner-circle)" fill="#FFFFFF">
+    <path d="M37 37H163V52C157 52 159 59 152 59C145 59 149 53 142 53C136 53 139 66 132 66C124 66 128 54 121 54C114 54 117 59 110 59C104 59 106 51 100 51C94 51 97 64 89 64C82 64 85 53 78 53C72 53 75 59 68 59C62 59 65 52 58 52C51 52 53 60 46 60C40 60 42 53 37 53Z"/>
+    <circle cx="115" cy="66" r="2"/>
+  </g>
+  <text fill="#FFFFFF" font-family="Oswald, Arial Narrow, sans-serif" font-size="11" font-weight="500" letter-spacing="1.5" text-anchor="middle" textLength="445" lengthAdjust="spacing">
+    <textPath href="#type-ring" startOffset="50%">20 BELOW • SMOKE &amp; VAPE • LAS VEGAS •</textPath>
+  </text>
+  <use href="#flake" transform="translate(100 97) scale(.56) translate(-50 -50)"/>
+  <text x="100" y="148" fill="#FFFFFF" font-family="Oswald, Arial Narrow, sans-serif" font-size="23" font-weight="500" letter-spacing="1" text-anchor="middle">-20°</text>
+</svg>

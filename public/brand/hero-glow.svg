@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <radialGradient id="fade">
+      <stop offset=".5" stop-color="#FFFFFF"/>
+      <stop offset=".8" stop-color="#FFFFFF" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="soft-edge" x="0" y="0" width="600" height="600" maskUnits="userSpaceOnUse">
+      <path fill="url(#fade)" d="M0 0H600V600H0Z"/>
+    </mask>
+    <path id="arm" d="M50 8V50M38 19L50 26L62 19M41 32L50 37.2L59 32"/>
+    <g id="flake" fill="none" stroke="#2EB6FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <use href="#arm"/>
+      <use href="#arm" transform="rotate(60 50 50)"/>
+      <use href="#arm" transform="rotate(120 50 50)"/>
+      <use href="#arm" transform="rotate(180 50 50)"/>
+      <use href="#arm" transform="rotate(240 50 50)"/>
+      <use href="#arm" transform="rotate(300 50 50)"/>
+    </g>
+  </defs>
+  <g mask="url(#soft-edge)">
+    <g filter="url(#blur)">
+      <ellipse cx="172" cy="238" rx="83" ry="146" fill="#37CEFD" opacity=".24" transform="rotate(-24 172 238)"/>
+      <ellipse cx="431" cy="302" rx="79" ry="153" fill="#2EB6FF" opacity=".2" transform="rotate(22 431 302)"/>
+      <ellipse cx="292" cy="440" rx="139" ry="52" fill="#E3F4FF" opacity=".12"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#2EB6FF" stroke-width="1.5">
+    <circle cx="300" cy="300" r="210" opacity=".12"/>
+    <circle cx="300" cy="300" r="238" opacity=".06"/>
+  </g>
+  <use href="#flake" transform="translate(110 104) rotate(12) scale(.22) translate(-50 -50)" opacity=".28"/>
+  <use href="#flake" transform="translate(302 56) rotate(-8) scale(.14) translate(-50 -50)" opacity=".2"/>
+  <use href="#flake" transform="translate(490 128) rotate(25) scale(.18) translate(-50 -50)" opacity=".24"/>
+  <use href="#flake" transform="translate(548 304) rotate(7) scale(.12) translate(-50 -50)" opacity=".18"/>
+  <use href="#flake" transform="translate(466 488) rotate(-16) scale(.22) translate(-50 -50)" opacity=".26"/>
+  <use href="#flake" transform="translate(285 546) rotate(20) scale(.14) translate(-50 -50)" opacity=".18"/>
+  <use href="#flake" transform="translate(105 466) rotate(4) scale(.18) translate(-50 -50)" opacity=".24"/>
+  <use href="#flake" transform="translate(53 295) rotate(-20) scale(.12) translate(-50 -50)" opacity=".2"/>
+</svg>
