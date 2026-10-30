@@ -3,6 +3,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { site } from "@/data/site";
 import Placeholder from "./Placeholder";
 import { Stars } from "./Icons";
+import OpenStatus from "./OpenStatus";
+import { PickupButton } from "./Pickup";
 
 type Slide = (typeof site.hero.slides)[number];
 
@@ -20,6 +22,7 @@ function TopLine({ s }: { s: Slide }) {
     <div className="hero-meta">
       <Badge s={s} />
       <span className="hero-rating"><Stars /> <b>{s.ratingText}</b> {s.reviewCount}</span>
+      <OpenStatus />
     </div>
   );
 }
@@ -93,8 +96,14 @@ export default function Hero() {
                 <div className="desktop-only-block"><TopLine s={s} /></div>
                 <h1>{s.title}</h1>
                 {s.subtitle && <p className="hero-subtitle">{s.subtitle}</p>}
-                <a href={s.cta.href} className={`btn ${ctaReady && i === active ? "btn-ready" : ""}`} data-manual-ready>
-                  <span>{s.cta.label}</span>
+                <div className="hero-ctas">
+                  <a href={s.cta.href} className={`btn ${ctaReady && i === active ? "btn-ready" : ""}`} data-manual-ready>
+                    <span>{s.cta.label}</span>
+                  </a>
+                  <PickupButton className="btn btn-outline btn-ready" />
+                </div>
+                <a href="#categories" className="text-link hero-browse">
+                  <span className="u-link">Browse what we carry</span>
                 </a>
                 <div className="hero-quote">
                   <Stars />

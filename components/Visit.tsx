@@ -1,6 +1,8 @@
 import { site } from "@/data/site";
 import SectionHead from "./SectionHead";
 import Icon from "./Icons";
+import OpenStatus from "./OpenStatus";
+import { PickupButton } from "./Pickup";
 
 export default function Visit() {
   const v = site.visit;
@@ -17,7 +19,7 @@ export default function Visit() {
               <small>{b.addressNote}</small>
             </div>
             <div>
-              <h4>Hours</h4>
+              <h4>Hours <OpenStatus /></h4>
               {v.hours.map((h) => (
                 <p key={h.day} className="visit-hours"><span>{h.day}</span><b>{h.time}</b></p>
               ))}
@@ -31,6 +33,7 @@ export default function Visit() {
             </ul>
             <div className="visit-ctas">
               <a href={b.directions} target="_blank" rel="noopener" className="btn"><span>Get Directions</span></a>
+              <PickupButton className="btn btn-accent btn-ready" />
               <a href={b.tel} className="btn btn-outline"><span>Call Now</span></a>
             </div>
             <a href={b.reviewLink} target="_blank" rel="noopener" className="text-link">

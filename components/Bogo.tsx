@@ -6,7 +6,7 @@ import Icon from "./Icons";
 export default function Bogo() {
   const b = site.bogo;
   return (
-    <section className="section section-cream">
+    <section className="section section-cream" id="deals">
       <div className="container narrow">
         <SectionHead eyebrow={b.eyebrow} title={b.title} text={b.text} />
         <div className="bogo-grid">

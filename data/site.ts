@@ -26,6 +26,7 @@ export const site = {
     tagline: "Cool vibes, hot deals! Premium vapes, smokes & accessories in Las Vegas.",
     logo: "/logo.png",
     hours: "Open 7 days | 8:00am - Midnight",
+    schedule: { opensHour: 8, closesHour: 24, timeZone: "America/Los_Angeles" }, // drives the live "Open now" badge
     phone,
     tel,
     email: "", // ❓ ask owner
@@ -39,15 +40,24 @@ export const site = {
       "https://www.google.com/maps?q=20+Below+Smoke+and+Vape,+2730+S+Maryland+Pkwy,+Las+Vegas,+NV+89109&output=embed",
   },
 
-  announcement: "❄️ Open 7 days · 8AM – Midnight · 2730 S Maryland Pkwy ❄️",
+  announcement: "❄️ Open 7 days · 8AM – Midnight · Order ahead for pickup ❄️",
+
+  // Pickup orders go to the store as a text message; customer pays + shows ID at the counter.
+  // ❓ Confirm with the owner that this number can receive texts (if not, swap in a cell number).
+  pickup: {
+    sms: "+17025460856",
+    title: "Order for Pickup",
+    intro: "Pick what you want, send it to us by text, and we'll have it bagged at the counter. Pay and show your 21+ ID when you pick up.",
+    notesPlaceholder: "e.g. Geek Bar Pulse X, any frozen flavor · 2 packs of Raw cones",
+    times: ["As soon as possible", "In about 30 minutes", "In about 1 hour", "Later today", "Tomorrow"],
+    fine: "We'll text you back to confirm stock and when it's ready. No payment online, no shipping or delivery.",
+  },
   warning: "WARNING: This product contains nicotine. Nicotine is an addictive chemical. 21+ only.",
 
   nav: [
-    { label: "Disposables", href: "#categories" },
-    { label: "E-Liquids", href: "#categories" },
-    { label: "Pods & Devices", href: "#categories" },
-    { label: "Glass & Pipes", href: "#categories" },
-    { label: "Hookah", href: "#categories" },
+    { label: "Shop", href: "#categories" },
+    { label: "New In", href: "#new" },
+    { label: "Deals", href: "#deals" },
     { label: "Brands", href: "#brands" },
     { label: "Reviews", href: "#reviews" },
     { label: "Visit Us", href: "#visit" },
@@ -86,30 +96,24 @@ export const site = {
     ],
   },
 
-  features: [
-    { icon: "clock", title: "Open 8AM – Midnight", text: "7 days a week" },
-    { icon: "gift", title: "Hot Deals Daily", text: "Ask about in-store specials" },
-    { icon: "star", title: "5.0 Google Rating", text: "Every review is 5 stars" },
-    { icon: "headset", title: "Knowledgeable Staff", text: "Ask for Joey or Darius" },
-  ],
-
   categories: {
     eyebrow: "What we carry",
     title: "Shop Top Categories",
     items: [
-      { name: "Disposables", href: "#", image: "/og/cat-disposables.jpg" },
-      { name: "E-Liquids", href: "#", image: "/og/cat-eliquids.jpg" },
-      { name: "Nicotine Pouches", href: "#", image: "/og/cat-pouches.jpg" },
-      { name: "Smoke Shop", href: "#", image: "/og/cat-smoke-shop.jpg" },
-      { name: "Pods", href: "#", image: "/og/cat-pods.jpg" },
-      { name: "Vape Devices", href: "#", image: "/og/cat-devices.jpg" },
+      { name: "Disposables", href: "#new", image: "/og/cat-disposables.jpg" },
+      { name: "E-Liquids", href: "#new", image: "/og/cat-eliquids.jpg" },
+      { name: "Nicotine Pouches", href: "#new", image: "/og/cat-pouches.jpg" },
+      { name: "Smoke Shop", href: "#new", image: "/og/cat-smoke-shop.jpg" },
+      { name: "Pods", href: "#favorites", image: "/og/cat-pods.jpg" },
+      { name: "Vape Devices", href: "#favorites", image: "/og/cat-devices.jpg" },
     ],
   },
 
   newProducts: {
+    id: "new",
     eyebrow: "Fresh picks, just in",
     title: "New In Store",
-    link: { label: "Call to check stock", href: tel },
+    link: { label: "See new drops on Instagram", href: "https://www.instagram.com/20belowsmokeandvape/" },
     items: [
       { name: "Pod Juice TFN Salt Nic – Strawberry Ice Cream (30ml)", price: "$11.99", href: "#", image: "/og/p-podjuice-sbic.jpg" },
       { name: "LUCY Breakers – Espresso", price: "$5.00", href: "#", fromPrice: true, image: "/og/p-lucy-breakers-espresso.png" },
@@ -125,12 +129,13 @@ export const site = {
   promo: {
     eyebrow: "In-store special",
     title: "Hot Deals, Ice Cold Prices",
-    text: "Ask at the counter about this week's specials.\nIn store only — no online orders.",
+    text: "Ask at the counter about this week's specials.\nShop in store or order ahead for pickup.",
     cta: { label: "Get Directions", href: directions },
     image: "/og/promo.png",
   },
 
   bestsellers: {
+    id: "favorites",
     eyebrow: "Most popular",
     title: "Customer Favorites",
     link: { label: "Call to check stock", href: tel },
@@ -177,7 +182,7 @@ export const site = {
   bogo: {
     eyebrow: "Hot deals",
     title: "Ice Cold Steals",
-    text: "Rotating in-store deals. Stop by or call to see what's on special this week.",
+    text: "Rotating in-store deals. Stop by, or add them to a pickup order and grab them on your way.",
     link: { label: "Call for today's deals", href: tel },
     items: [
       { name: "Pod Mesh Nano 1000 – Aloe Grape", price: "$11.99", href: "#", badge: "In store", image: "/og/p-podmesh-aloe.jpg" },
@@ -199,15 +204,15 @@ export const site = {
   footer: {
     columns: [
       { title: "Shop", links: [
-        { label: "Disposables", href: "#categories" },
-        { label: "E-Liquids", href: "#categories" },
-        { label: "Pods & Devices", href: "#categories" },
-        { label: "Glass & Pipes", href: "#categories" },
-        { label: "Hookah", href: "#categories" },
+        { label: "Categories", href: "#categories" },
+        { label: "New In Store", href: "#new" },
+        { label: "Customer Favorites", href: "#favorites" },
+        { label: "Deals", href: "#deals" },
         { label: "Brands", href: "#brands" },
       ] },
       { title: "Store", links: [
         { label: "Get Directions", href: directions },
+        { label: "Order for Pickup", href: "#pickup" },
         { label: "Call Us", href: tel },
         { label: "Leave a Review", href: reviewLink },
         { label: "Hours & Location", href: "#visit" },
@@ -223,7 +228,7 @@ export const site = {
       text: "Drop your email for in-store specials and new arrivals. 21+ only.",
     },
     legal:
-      "WARNING: Products sold at 20 Below Smoke & Vape may contain nicotine. Nicotine is an addictive chemical. You must be 21 or older to purchase tobacco and vapor products in Nevada; valid ID required. Products are sold in store only. Product images and brand logos shown are placeholders. Prices and availability may vary.",
+      "WARNING: Products sold at 20 Below Smoke & Vape may contain nicotine. Nicotine is an addictive chemical. You must be 21 or older to purchase tobacco and vapor products in Nevada; valid ID required. Products are sold in store only; pickup orders are paid for and ID-checked at the counter. No shipping or delivery. Product images and brand logos shown are placeholders. Prices and availability may vary.",
     copyright: "© 2026, 20 Below Smoke & Vape. All rights reserved.",
   },
 };

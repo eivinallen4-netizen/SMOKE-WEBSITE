@@ -8,17 +8,17 @@ import ProductCard from "./ProductCard";
 import SectionHead from "./SectionHead";
 import Icon from "./Icons";
 
-type Props = { eyebrow: string; title: string; link: { label: string; href: string }; items: Product[] };
+type Props = { id?: string; eyebrow: string; title: string; link: { label: string; href: string }; items: Product[] };
 
 // Same settings as the theme's product slider: 2 per view with a peek on mobile,
 // 4 per view from 750px, draggable scrollbar, arrows that hide when there's nothing to scroll.
-export default function ProductCarousel({ eyebrow, title, link, items }: Props) {
+export default function ProductCarousel({ id, eyebrow, title, link, items }: Props) {
   const prev = useRef<HTMLButtonElement>(null);
   const next = useRef<HTMLButtonElement>(null);
   const [ready, setReady] = useState(false);
 
   return (
-    <section className="section section--slider">
+    <section className="section section--slider" id={id}>
       <div className="container narrow">
         <SectionHead eyebrow={eyebrow} title={title} />
         <div className="p-slider">

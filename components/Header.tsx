@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { site } from "@/data/site";
 import Icon from "./Icons";
+import { PickupButton } from "./Pickup";
 
 export function Logo() {
   return site.brand.logo ? (
@@ -27,6 +28,7 @@ export default function Header() {
         </nav>
         <div className="header-icons">
           <a href={site.brand.directions} target="_blank" rel="noopener" className="icon-btn desktop-only" aria-label="Directions"><Icon name="pin" /></a>
+          <span className="desktop-only"><PickupButton className="btn btn-outline-light btn-sm btn-ready header-call" label="Pickup" /></span>
           <a href={site.brand.tel} className="btn btn-accent btn-sm header-call"><span>Call</span></a>
         </div>
       </div>

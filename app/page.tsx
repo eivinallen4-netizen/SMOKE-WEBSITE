@@ -2,7 +2,6 @@ import { site } from "@/data/site";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import FeatureStrip from "@/components/FeatureStrip";
 import Categories from "@/components/Categories";
 import ProductCarousel from "@/components/ProductCarousel";
 import PromoBanner from "@/components/PromoBanner";
@@ -12,15 +11,16 @@ import Bogo from "@/components/Bogo";
 import Visit from "@/components/Visit";
 import AgeGate from "@/components/AgeGate";
 import Footer from "@/components/Footer";
+import { PickupProvider } from "@/components/Pickup";
+import ActionBar from "@/components/ActionBar";
 
 export default function Home() {
   return (
-    <>
+    <PickupProvider>
       <AnnouncementBar />
       <Header />
       <main>
         <Hero />
-        <FeatureStrip />
         <Categories />
         <ProductCarousel {...site.newProducts} />
         <PromoBanner />
@@ -31,7 +31,8 @@ export default function Home() {
         <Visit />
       </main>
       <Footer />
+      <ActionBar />
       <AgeGate />
-    </>
+    </PickupProvider>
   );
 }
